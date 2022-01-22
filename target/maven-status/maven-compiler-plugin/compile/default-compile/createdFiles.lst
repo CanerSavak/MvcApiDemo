@@ -1,0 +1,3 @@
+com\example\entities\User.class
+com\example\repositories\UserRepository.class
+com\example\MvcapiApplication.class

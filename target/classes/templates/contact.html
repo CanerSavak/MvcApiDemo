@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Paylaş</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><span style="font-size: 30px;">KÜÇÜK PATİLER</span></a>
+        <div class="col-1"></div>
+        <div class="col-8">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="/home"><span style="font-size: 25px;">ANASAYFA</span></a>
+                    <a class="nav-item nav-link" href="/about"><span style="font-size: 25px;">HAKKIMIZDA</span></a>
+                    <a class="nav-item nav-link" href="/contact"><span style="font-size: 25px;">PAYLAŞ</span></a>
+                    <a class="nav-item nav-link" href="/think"><span style="font-size: 25px;">YORUMLAR</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </nav>
+    </br>
+            <div align="center"><h1 >PAYLAŞ</h1></div>
+    </br>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-7">
+            <div class="row">
+                <div class="col-10">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <form action="contact_ekle" method="post" th:object="${yeni_user}">
+                                <div>
+                                        <h7>İSİM</h7>
+                                    </br>
+                                        <input class="form-control" type="text"  th:field="*{name}" required="required" autocomplete="off">
+                                </div>
+                                <div>
+                                    <h7>EMAİL</h7>
+                                    </br>
+                                        <input class="form-control" type="text"  th:field="*{email}" required="required" autocomplete="off">
+                                </div>
+                                <div>
+                                    <h7>TELEFON</h7>
+                                    </br>
+                                    <input class="form-control" type="text"  th:field="*{telephone}" required="required" autocomplete="off">
+                                </div>
+                                <div>
+                                    <h7>KONU</h7>
+                                    </br>
+                                    <input class="form-control" type="text"  th:field="*{subject}" required="required" autocomplete="off">
+                                </div>
+                                <div>
+                                    <h7>DÜŞÜNCELER</h7>
+                                    </br>
+                                    <input class="form-control" type="text"  th:field="*{idea}" required="required" autocomplete="off">
+                                </div>
+                                <div>
+                                    <input type="submit"  class="btn btn-primary mt-3">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+
+
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="/js/bootstrap.bundle.js"></script>
+</html>

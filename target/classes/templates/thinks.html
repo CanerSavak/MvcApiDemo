@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Düşünceler</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><span style="font-size: 30px;">KÜÇÜK PATİLER</span></a>
+        <div class="col-1"></div>
+        <div class="col-8">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="/home"><span style="font-size: 25px;">ANASAYFA</span></a>
+                    <a class="nav-item nav-link" href="/about"><span style="font-size: 25px;">HAKKIMIZDA</span></a>
+                    <a class="nav-item nav-link" href="/contact"><span style="font-size: 25px;">PAYLAŞ</span></a>
+                    <a class="nav-item nav-link" href="/think"><span style="font-size: 25px;">YORUMLAR</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </nav>
+    <div class="row">
+        <div>
+            </br>
+            <div align="center"><h1 >DÜŞÜNCELER</h1></div>
+            </br>
+        </div>
+        <div  class="col-3"></div>
+        <div class="col-7">
+            <div class="col-10">
+                <table class="table table-striped table-bordered">
+                    <thead class="table-dark">
+                    <tr>
+                        <th scope="col" class="col-auto" >İsim</th>
+                        <th scope="col" class="col-auto" >Konu</th>
+                        <th scope="col" class="col-auto" >Yorum</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="user : ${user_list}">
+                        <td class="col-auto"><label th:text="${user.name}"></label></td>
+                        <td class="col-auto"><label th:text="${user.subject}"></label></td>
+                        <td class="col-auto"><label th:text="${user.idea}"></label></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="col-2"></div>
+
+    </div>
+</div>
+
+</body>
+
+</html>
